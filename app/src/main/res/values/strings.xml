@@ -2,7 +2,5 @@
     <string name="app_name">PushNotification</string>
 
     <string name="ID_Notification">android.app.NotificationManager.MainActivity</string>
-    <string name="notif_title">My notification</string>
-    <string name="notif_content_text">Hello World! Hello World!</string>
 
 </resources>
