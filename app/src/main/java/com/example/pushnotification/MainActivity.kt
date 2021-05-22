@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.pushnotification.adapter.NotificationAdapter
+import com.example.pushnotification.logic.ChannelLogic
+import com.example.pushnotification.logic.NotificationLogic
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,9 +18,9 @@ class MainActivity : AppCompatActivity() {
                 Context.NOTIFICATION_SERVICE) as NotificationManager
 
         findViewById<Button>(R.id.showNotificationButton).setOnClickListener {
-            var adapter = NotificationAdapter(this@MainActivity, systemService)
-            adapter.initializeChannel()
-            adapter.initializeNotification()
+            var adapter = NotificationAdapter(systemService)
+            adapter.initializeChannel(ChannelLogic())
+            adapter.initializeNotification(NotificationLogic(this@MainActivity))
         }
     }
 }
