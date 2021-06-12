@@ -11,7 +11,7 @@ import com.example.pushnotification.logic.NotificationLogic
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState) 
         setContentView(R.layout.activity_main)
 
         val systemService = getSystemService(
