@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val systemService = getSystemService(
-                Context.NOTIFICATION_SERVICE) as NotificationManager
+                Context.NOTIFICATION_SERVICE) as NotificationManager 
 
         findViewById<Button>(R.id.showNotificationButton).setOnClickListener {
             var adapter = NotificationAdapter(systemService)
